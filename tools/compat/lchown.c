@@ -41,6 +41,10 @@
 #include <errno.h>
 #include <unistd.h>
 
+#if defined(__minix) && defined(__weak_alias) && defined(_LIBC)
+__weak_alias(__posix_lchown, lchown)
+#endif /* defined(__minix) && defined(__weak_alias) && defined(_LIBC) */
+
 int
 lchown(const char *path, uid_t owner, gid_t group)
 {
