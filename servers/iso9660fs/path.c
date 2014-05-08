@@ -195,7 +195,7 @@ size_t *offsetp
 
   /* Find starting inode inode according to the request message */
   if ((start_dir = get_dir_record(dir_ino)) == NULL) {
-    printf("ISOFS: couldn't find starting inode %u\n", dir_ino);
+    printf("ISOFS: couldn't find starting inode %llu\n", dir_ino);
     return(ENOENT);
   }
   
