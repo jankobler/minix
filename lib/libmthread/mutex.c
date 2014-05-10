@@ -263,7 +263,3 @@ int mthread_mutex_verify(void)
   return(r);
 }
 #endif
-
-/* pthread compatibility layer. */
-__weak_alias(pthread_mutex_init, mthread_mutex_init)
-

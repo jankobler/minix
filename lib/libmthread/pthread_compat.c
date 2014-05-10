@@ -16,6 +16,15 @@
  * critical section as they both hold a (different) mutex.
  */
 
+
+/*===========================================================================*
+ *				pthread_mutex_init			     *
+ *===========================================================================*/
+int pthread_mutex_init(pthread_mutex_t *mutex, pthread_mutexattr_t *mattr)
+{
+	return mthread_mutex_init(mutex, mattr);
+}
+
 /*===========================================================================*
  *				pthread_mutex_destroy			     *
  *===========================================================================*/
@@ -63,6 +72,14 @@ int pthread_mutex_unlock(pthread_mutex_t *mutex)
 	}
 
 	return mthread_mutex_unlock(mutex);
+}
+
+/*===========================================================================*
+ *				pthread_cond_init			     *
+ *===========================================================================*/
+int pthread_cond_init(pthread_cond_t *cond, pthread_condattr_t *cattr)
+{
+	return mthread_cond_init(cond, cattr);
 }
 
 /*===========================================================================*
