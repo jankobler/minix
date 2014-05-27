@@ -520,8 +520,8 @@ lan8710a_dma_reset_init(void)
 
 	/*
 	 * Writing the address of the first buffer descriptor in the queue
-	 * (nonzero value)to the channel’s head descriptor pointer in the
-	 * channel’s Rx DMA state.
+	 * (nonzero value)to the channel's head descriptor pointer in the
+	 * channel's Rx DMA state.
 	 */
 	lan8710a_reg_write(CPDMA_STRAM_RX_HDP(0),
 			  (u32_t)lan8710a_state.rx_desc_phy);
