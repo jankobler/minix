@@ -214,6 +214,12 @@ void vm_enable_paging(void)
 
 	sctlr = read_sctlr();
 
+	if( sctlr & CPU_CONTROL_VECRELOC)
+	{   // High Exception Vector is selected
+	    // but Vector Base Register has to be used
+	    sctlr &= ~CPU_CONTROL_VECRELOC;
+	}
+	
 	/* Enable MMU */
 	sctlr |= CPU_CONTROL_MMU_ENABLE;
 
