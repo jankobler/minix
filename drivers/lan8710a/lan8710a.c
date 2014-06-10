@@ -254,7 +254,7 @@ message *m;
 	reply.m_type = DL_CONF_REPLY;
 	reply.m_netdrv_net_dl_conf.stat = OK;
 	memcpy(reply.m_netdrv_net_dl_conf.hw_addr,
-		lan8710a_state.address,
+		lan8710a_state.address.ea_addr,
 		sizeof(reply.m_netdrv_net_dl_conf.hw_addr));
 	mess_reply(m, &reply);
 }
