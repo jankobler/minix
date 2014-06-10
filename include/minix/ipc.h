@@ -788,7 +788,7 @@ _ASSERT_MSG_SIZE(mess_lsys_krn_sys_getmcontext);
 typedef struct {
 	endpoint_t endpt;
 	int privflags;
-	uint8_t name[48];
+	char name[48];
 
 } mess_krn_lsys_sys_getwhoami;
 _ASSERT_MSG_SIZE(mess_krn_lsys_sys_getwhoami);
