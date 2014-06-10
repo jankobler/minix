@@ -267,7 +267,7 @@ int do_nice(message *m_ptr)
 
 	if (sched_isokendpt(m_ptr->m_pm_sched_scheduling_set_nice.endpoint, &proc_nr_n) != OK) {
 		printf("SCHED: WARNING: got an invalid endpoint in OoQ msg "
-		"%ld\n", m_ptr->m_pm_sched_scheduling_set_nice.endpoint);
+		"%d\n", m_ptr->m_pm_sched_scheduling_set_nice.endpoint);
 		return EBADEPT;
 	}
 
